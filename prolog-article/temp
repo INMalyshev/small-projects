@@ -1,0 +1,50 @@
+% [СУЩЕСТВИТЕЛЬНОЕ] число / род / падеж
+noun(sing, femn, nomn) --> ["девочка"].
+noun(sing, masc, nomn) --> ["мальчик"].
+noun(plur, _, nomn) --> ["девочки"].
+noun(plur, _, nomn) --> ["мальчики"].
+
+% [ГЛАГОЛ] число / род / время
+verb(sing, femn, pres) --> ["делает"].
+verb(sing, femn, future) --> ["сделает"].
+verb(sing, femn, past) --> ["сделала"].
+verb(plur, _, pres) --> ["делают"].
+verb(plur, _, future) --> ["сделают"].
+verb(plur, _, past) --> ["сделали"].
+verb(sing, masc, past) --> ["купил"].
+
+% [ЧАСТИЦА] тип
+particle(negative) --> ["не"].
+particle(negative) --> ["ни"].
+
+% [ПРИЛАГАТЕЛЬНОЕ] число / род / падеж
+adjective(sing, femn, nomn) --> ["именительная"].     % именительный
+adjective(sing, femn, gent) --> ["родительной"].        % родительный
+adjective(sing, femn, datv) --> ["дательной"].            % дательный
+adjective(sing, femn, ablt) --> ["творительной"].       % творительный
+adjective(sing, femn, accs) --> ["винительную"].      % винительный
+adjective(sing, femn, loct) --> ["предложной"].    % предложный
+adjective(sing, masc, nomn) --> ["маленький"].    % предложный
+
+% [МЕСТОИМЕНИЕ] число / род / падеж / тип
+pronoun(sing, femn, nomn, personal) --> ["она"].      % именительный
+pronoun(sing, femn, gent, personal) --> ["ее"].         % родительный
+pronoun(sing, femn, datv, personal) --> ["ей"].           % дательный
+pronoun(sing, femn, ablt, personal) --> ["ей"].         % творительный
+pronoun(sing, femn, accs, personal) --> ["ей"].       % винительный
+pronoun(sing, femn, loct, personal) --> ["о ней"]. % предложный
+pronoun(sing, masc, gent, personal) --> ["его"].       
+pronoun(sing, masc, nomn, questioning) --> ["кто"].
+pronoun(sing, neuter, nomn, questioning) --> ["что"].
+pronoun(sing, masc, nomn, questioning) --> ["какой"].
+pronoun(sing, masc, nomn, questioning) --> ["чей"].
+pronoun(plur, _, gent, questioning) --> ["сколько"].
+pronoun(sing, masc, nomn, questioning) --> ["каков"].
+pronoun(sing, masc, nomn, questioning) --> ["который"].
+
+% [НАРЕЧИЕ]
+adverb() --> ["быстро"].
+adverb() --> ["яростно"].
+adverb() --> ["скоро"].
+adverb() --> ["высоко"].
+adverb() --> ["горячо"].
